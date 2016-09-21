@@ -10,7 +10,7 @@ package dip.lab2.student.solution1;
  *
  * @author your name goes here
  */
-public class BaggageServiceTipCalculator implements Calculator{
+public class BaggageServiceTipCalculator implements TipCalculator{
     private static final double MIN_BILL = 0.00;
     private static final double MAX_BILL = 100.00;
     private static final String BILL_ENTRY_ERR =
@@ -24,7 +24,7 @@ public class BaggageServiceTipCalculator implements Calculator{
     private int bagCount;
 
     @Override
-    public double getAmount() {
+    public final double getAmount() {
         return getTipForBaggeHandler();
     }
    
@@ -37,7 +37,7 @@ public class BaggageServiceTipCalculator implements Calculator{
         baseTipPerBag = 1.00; // set default value
     }
 
-    public double getTipForBaggeHandler() {
+    public final double getTipForBaggeHandler() {
         double tip = 0.00; // always initialize local variables
 
         switch(serviceQuality) {
@@ -60,11 +60,11 @@ public class BaggageServiceTipCalculator implements Calculator{
         serviceQuality = q;
     }
 
-    public ServiceQuality getServiceQuality() {
+    public final ServiceQuality getServiceQuality() {
         return serviceQuality;
     }
 
-    public int getBagCount() {
+    public final int getBagCount() {
         return bagCount;
     }
 
@@ -76,11 +76,11 @@ public class BaggageServiceTipCalculator implements Calculator{
         this.bagCount = bagCount;
     }
 
-    public double getBaseTipPerBag() {
+    public final double getBaseTipPerBag() {
         return baseTipPerBag;
     }
 
-    public void setBaseTipPerBag(double baseTipPerBag) {
+    public final  void setBaseTipPerBag(double baseTipPerBag) {
         if(baseTipPerBag < 0) {
             throw new IllegalArgumentException(
                     "error: base tip must be greater than or equal to zero");

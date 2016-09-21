@@ -25,13 +25,15 @@ public class Startup {
     
     
     public static void main(String[] args) {
-        Calculator person1 = new FoodServiceTipCalculator(ServiceQuality.GOOD,78.95);
-        Calculator person2 = new BaggageServiceTipCalculator(ServiceQuality.GOOD,40);
+        TipCalculator person1 = new FoodServiceTipCalculator(ServiceQuality.GOOD,78.95);
+        TipCalculator person2 = new BaggageServiceTipCalculator(ServiceQuality.GOOD,40);
     
-        Calculator[] tips = {person1, person2};
+        TipCalculator[] tips = {person1, person2};
+        
+        TipCalculatorManager mgr = new TipCalculatorManager();
         
          for(int i=0; i < tips.length; i++) {
-            System.out.println("Person  "+i+"Made this much in tips:" + tips[i].getAmount());
+            System.out.println("Person  "+i+"Made this much in tips:" + mgr.doCalculation(tips[i]));
             
         }
         

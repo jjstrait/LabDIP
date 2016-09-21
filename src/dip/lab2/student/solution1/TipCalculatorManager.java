@@ -9,22 +9,20 @@ package dip.lab2.student.solution1;
  *
  * @author jstra
  */
-public class CalculatorManager {
-    private Calculator cal;
+public class TipCalculatorManager {
+    private TipCalculator cal;
     
-    public CalculatorManager(Calculator cal) {
-        this.cal = cal;
-    }
+   
     
-    public void doCalculation(){
-        cal.getAmount();
+    public double doCalculation(TipCalculator cal){
+       return cal.getAmount();
     }
   
-    public Calculator getCalculator() {
+    public TipCalculator getCalculator() {
         return cal;
     }
 
-    public void setCalculator(Calculator cal) {
+    public void setCalculator(TipCalculator cal) {
         this.cal = cal;
     }
     

@@ -9,6 +9,6 @@ package dip.lab2.student.solution1;
  *
  * @author jstra
  */
-public interface Calculator {
+public interface TipCalculator {
     public abstract double getAmount();
 }
