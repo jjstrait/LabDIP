@@ -30,10 +30,11 @@ public class Startup {
     
         TipCalculator[] tips = {person1, person2};
         
-        TipCalculatorManager mgr = new TipCalculatorManager();
+        
         
          for(int i=0; i < tips.length; i++) {
-            System.out.println("Person  "+i+"Made this much in tips:" + mgr.doCalculation(tips[i]));
+              TipCalculatorManager mgr = new TipCalculatorManager(tips[i]);
+            System.out.println("Person  "+i+" Made this much in tips:" + mgr.getTip());
             
         }
         

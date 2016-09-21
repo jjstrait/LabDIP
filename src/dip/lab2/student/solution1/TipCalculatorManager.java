@@ -10,20 +10,22 @@ package dip.lab2.student.solution1;
  * @author jstra
  */
 public class TipCalculatorManager {
-    private TipCalculator cal;
+    private TipCalculator calc;
     
-   
+   public TipCalculatorManager(TipCalculator calc){
+       this.calc = calc;
+   }
     
-    public double doCalculation(TipCalculator cal){
-       return cal.getAmount();
+    public double getTip(){
+       return calc.getTip();
     }
   
     public TipCalculator getCalculator() {
-        return cal;
+        return calc;
     }
 
     public void setCalculator(TipCalculator cal) {
-        this.cal = cal;
+        this.calc = cal;
     }
     
 }
