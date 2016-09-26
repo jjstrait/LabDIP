@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class KeyboardInput implements StringInput {
 
     @Override
-    public String getStringInput() {
+    public final String getStringInput() {
         
 
             Scanner input = new Scanner(System.in);

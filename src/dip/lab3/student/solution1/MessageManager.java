@@ -18,7 +18,7 @@ public class MessageManager {
         this.output = output;
     }
 
-    public void sendMessage(){
+    public final void sendMessage(){
         String line = input.getStringInput();
         output.performOutput(line);
     }

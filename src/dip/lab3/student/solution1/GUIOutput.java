@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class GUIOutput implements StringOutput{
 
     @Override
-    public void performOutput(String line) {
+    public final void performOutput(String line) {
         JOptionPane.showMessageDialog(null, line);
         
     }

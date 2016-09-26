@@ -20,11 +20,11 @@ public class TipCalculatorManager {
        return calc.getTip();
     }
   
-    public TipCalculator getCalculator() {
+    public final TipCalculator getCalculator() {
         return calc;
     }
 
-    public void setCalculator(TipCalculator cal) {
+    public final void setCalculator(TipCalculator cal) {
         this.calc = cal;
     }
     
