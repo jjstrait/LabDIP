@@ -23,19 +23,19 @@ public class MessageManager {
         output.performOutput(line);
     }
 
-    public StringInput getInput() {
+    public final StringInput getInput() {
         return input;
     }
 
-    public void setInput(StringInput input) {
+    public final void setInput(StringInput input) {
         this.input = input;
     }
 
-    public StringOutput getOutput() {
+    public final StringOutput getOutput() {
         return output;
     }
 
-    public void setOutput(StringOutput output) {
+    public final void setOutput(StringOutput output) {
         this.output = output;
     }
     
