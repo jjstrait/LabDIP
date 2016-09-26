@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 public class GUIInput implements StringInput{
 
     @Override
-    public String getInput() {
+    public String getStringInput() {
         return JOptionPane.showInputDialog(null, "Please Enter Some Text:");
     }
     

@@ -9,6 +9,8 @@ package dip.lab3.student.solution1;
  *
  * @author jstra
  */
-public interface StringInput extends Input {
-    public abstract String getInput();
+public interface StringInput{
+    
+   
+    public abstract String getStringInput();
 }
